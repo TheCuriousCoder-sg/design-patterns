@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        NotificationClient client = new NotificationClient();
+        OrderService client = new OrderService();
         client.sendNotificationEmail();
         client.sendNotificationSms();
     }

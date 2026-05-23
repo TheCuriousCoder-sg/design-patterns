@@ -1,4 +1,4 @@
-public class NotificationClient {
+public class OrderService {
     EmailNotification emailNotification = new EmailNotification();
     SmsNotification smsNotification = new SmsNotification();
 
