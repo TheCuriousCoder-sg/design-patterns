@@ -5,9 +5,7 @@ import java.util.List;
 public class OrderService {
 
     public void sendNotification() {
-        List<Notification> notifications = NotificationFactory.sendNotification(new ArrayList<>(Arrays.asList("EMAIL", "SMS")));
-        for(Notification notification: notifications) {
-            notification.send();
-        }
+        Notification notification = NotificationFactory.sendNotification("SMS");
+        notification.send();
     }
 }
