@@ -1,12 +1,13 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class OrderService {
-    EmailNotification emailNotification = new EmailNotification();
-    SmsNotification smsNotification = new SmsNotification();
 
-    public void sendNotificationEmail() {
-        emailNotification.send();
-    }
-
-    public void sendNotificationSms() {
-        smsNotification.send();
+    public void sendNotification() {
+        List<Notification> notifications = NotificationFactory.sendNotification(new ArrayList<>(Arrays.asList("EMAIL", "SMS")));
+        for(Notification notification: notifications) {
+            notification.send();
+        }
     }
 }
