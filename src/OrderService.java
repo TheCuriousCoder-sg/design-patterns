@@ -1,7 +1,10 @@
 public class OrderService {
 
     public void sendNotification() {
-        Notification notification = NotificationFactory.sendNotification("SMS");
+        NotificationFactory factory = new SmsFactory();
+        Notification notification = factory.createNotification();
+        Template template = factory.createTemplate();
         notification.send();
+        template.format();
     }
 }
