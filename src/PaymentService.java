@@ -1,7 +1,6 @@
-public class PaymentService implements Payment{
+public class PaymentService {
 
-    @Override
-    public String pay(Double amount, int customerId) {
+    public String pay(int amount, int customerId) {
         // Payment logic to be added here
         return "SUCCESS";
     }

@@ -1,5 +1,5 @@
 public class PaymentClient {
-    Payment payment;
+    PaymentService payment = new PaymentService();
 
     public void makePayment() {
         String result = payment.pay(100.0, 123);
