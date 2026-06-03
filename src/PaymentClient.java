@@ -1,5 +1,9 @@
 public class PaymentClient {
-    PaymentService payment = new PaymentService();
+    PaymentService payment;
+
+    public PaymentClient(PaymentService payment) {
+        this.payment = payment;
+    }
 
     public void makePayment() {
         String result = payment.pay(100, 123);
